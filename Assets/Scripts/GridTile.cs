@@ -9,11 +9,11 @@ public class GridTile : MonoBehaviour
   [SerializeField] private SpriteRenderer m_spriteRenderer;
   [SerializeField] private GameObject m_highLight;
 
-  private GridCoordinates m_GridCoordinates = new GridCoordinates(0,0);
+  private GridCoordinate m_gridCoordinate = new GridCoordinate(0,0);
   
   public void Init(bool isOffset, int p_x, int p_y)
   {
-      m_GridCoordinates = new GridCoordinates(p_x, p_y);
+      m_gridCoordinate = new GridCoordinate(p_x, p_y);
       m_spriteRenderer.color = isOffset ? m_offsetColor : m_baseColor;
   }
 
